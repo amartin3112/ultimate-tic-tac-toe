@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ultimate Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Ultimate Tic Tac Toe</h1>
+    <p class="instructions">Like normal tic tac toe, but you're playing 9 games at once. To win, you need to win three of the inner games in a row.</p>
+    <div class="players">
+        <p class="player-one active-player">Player 1 (X): <span class="player-one-score"></span></p>
+        <p class="player-two">Player 2 (O): <span class="player-two-score"></span></p>
+    </div>
+    <div class="master-board">
+        <div class="inner-board">
+            <div class="cell" data-id="00"></div>
+            <div class="cell" data-id="01"></div>
+            <div class="cell" data-id="02"></div>
+            <div class="cell" data-id="03"></div>
+            <div class="cell" data-id="04"></div>
+            <div class="cell" data-id="05"></div>
+            <div class="cell" data-id="06"></div>
+            <div class="cell" data-id="07"></div>
+            <div class="cell" data-id="08"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board middle-column">
+            <div class="cell" data-id="10"></div>
+            <div class="cell" data-id="11"></div>
+            <div class="cell" data-id="12"></div>
+            <div class="cell" data-id="13"></div>
+            <div class="cell" data-id="14"></div>
+            <div class="cell" data-id="15"></div>
+            <div class="cell" data-id="16"></div>
+            <div class="cell" data-id="17"></div>
+            <div class="cell" data-id="18"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board">
+            <div class="cell" data-id="20"></div>
+            <div class="cell" data-id="21"></div>
+            <div class="cell" data-id="22"></div>
+            <div class="cell" data-id="23"></div>
+            <div class="cell" data-id="24"></div>
+            <div class="cell" data-id="25"></div>
+            <div class="cell" data-id="26"></div>
+            <div class="cell" data-id="27"></div>
+            <div class="cell" data-id="28"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board middle-row">
+            <div class="cell" data-id="30"></div>
+            <div class="cell" data-id="31"></div>
+            <div class="cell" data-id="32"></div>
+            <div class="cell" data-id="33"></div>
+            <div class="cell" data-id="34"></div>
+            <div class="cell" data-id="35"></div>
+            <div class="cell" data-id="36"></div>
+            <div class="cell" data-id="37"></div>
+            <div class="cell" data-id="38"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board middle-row middle-column">
+            <div class="cell" data-id="40"></div>
+            <div class="cell" data-id="41"></div>
+            <div class="cell" data-id="42"></div>
+            <div class="cell" data-id="43"></div>
+            <div class="cell" data-id="44"></div>
+            <div class="cell" data-id="45"></div>
+            <div class="cell" data-id="46"></div>
+            <div class="cell" data-id="47"></div>
+            <div class="cell" data-id="48"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board middle-row">
+            <div class="cell" data-id="50"></div>
+            <div class="cell" data-id="51"></div>
+            <div class="cell" data-id="52"></div>
+            <div class="cell" data-id="53"></div>
+            <div class="cell" data-id="54"></div>
+            <div class="cell" data-id="55"></div>
+            <div class="cell" data-id="56"></div>
+            <div class="cell" data-id="57"></div>
+            <div class="cell" data-id="58"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board">
+            <div class="cell" data-id="60"></div>
+            <div class="cell" data-id="61"></div>
+            <div class="cell" data-id="62"></div>
+            <div class="cell" data-id="63"></div>
+            <div class="cell" data-id="64"></div>
+            <div class="cell" data-id="65"></div>
+            <div class="cell" data-id="66"></div>
+            <div class="cell" data-id="67"></div>
+            <div class="cell" data-id="68"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board middle-column">
+            <div class="cell" data-id="70"></div>
+            <div class="cell" data-id="71"></div>
+            <div class="cell" data-id="72"></div>
+            <div class="cell" data-id="73"></div>
+            <div class="cell" data-id="74"></div>
+            <div class="cell" data-id="75"></div>
+            <div class="cell" data-id="76"></div>
+            <div class="cell" data-id="77"></div>
+            <div class="cell" data-id="78"></div>
+            <div class="winner"></div>
+        </div>
+        <div class="inner-board">
+            <div class="cell" data-id="80"></div>
+            <div class="cell" data-id="81"></div>
+            <div class="cell" data-id="82"></div>
+            <div class="cell" data-id="83"></div>
+            <div class="cell" data-id="84"></div>
+            <div class="cell" data-id="85"></div>
+            <div class="cell" data-id="86"></div>
+            <div class="cell" data-id="87"></div>
+            <div class="cell" data-id="88"></div>
+            <div class="winner"></div>
+        </div>
+    </div>
+    <section class="winner-section">
+        <p class="winning-player"></p>
+        <button class="new-game-btn">New Game</button>
+        <button class="reset-btn">Reset Scores</button>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
